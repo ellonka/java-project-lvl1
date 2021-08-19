@@ -10,4 +10,5 @@ bin/
 *.class
 .idea/
 .vscode/
+.DS_store
 
