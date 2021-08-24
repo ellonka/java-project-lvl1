@@ -6,3 +6,6 @@
 
 ### Build:
 ![Build](https://github.com/ellonka/java-project-lvl1/actions/workflows/build-for-actions/badge.svg)
+
+### To watch an example how to play:
+https://asciinema.org/a/KHmF29gw1c7Lyn3iPD4WAZlh4
