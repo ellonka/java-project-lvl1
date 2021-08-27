@@ -6,13 +6,20 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class EvenGame {
-    static int randomNum;
+    private static int randomNum;
 
     public static void playEvenGame(Scanner scanner) {
         String name = Cli.hello(scanner);
-
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Engine.play(scanner, name, question(), rightAnswer());
+
+        String[] arrayOfQuestions = new String[Engine.COUNT_OF_REPEAT];
+        String[] arrayOfRightAnswers = new String[Engine.COUNT_OF_REPEAT];
+        for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
+            arrayOfQuestions[i] = question();
+            arrayOfRightAnswers[i] = rightAnswer();
+        }
+
+        Engine.play(scanner, name, arrayOfQuestions, arrayOfRightAnswers);
     }
 
     public static String question() {

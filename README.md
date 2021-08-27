@@ -9,3 +9,6 @@
 
 ### To watch an example how to play Even:
 https://asciinema.org/a/KHmF29gw1c7Lyn3iPD4WAZlh4
+
+### To watch an example how to play Calc:
+https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0

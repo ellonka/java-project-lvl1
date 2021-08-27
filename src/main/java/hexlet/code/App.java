@@ -16,23 +16,14 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        int choice = scanner.nextInt();
+        String choice = scanner.next();
 
-        switch (choice) {
-            case (1):
-                Cli.hello(scanner);
-                break;
-
-            case (2):
-                EvenGame.playEvenGame(scanner);
-                break;
-
-            case (3):
-                CalcGame.playCalcGame(scanner);
-                break;
-
-            default:
-                break;
+        if (choice.equals("1")) {
+            Cli.hello(scanner);
+        } else if (choice.equals("2")) {
+            EvenGame.playEvenGame(scanner);
+        } else if (choice.equals("3")) {
+            CalcGame.playCalcGame(scanner);
         }
     }
 }
