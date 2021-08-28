@@ -35,7 +35,6 @@ public class ProgressionGame {
                 str += arr[i] + " ";
             }
         }
-
         return str;
     }
 
