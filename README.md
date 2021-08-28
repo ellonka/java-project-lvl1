@@ -13,8 +13,11 @@ https://asciinema.org/a/KHmF29gw1c7Lyn3iPD4WAZlh4
 ### How to play Calc:
 https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0
 
-### How to play GCD
+### How to play GCD:
 https://asciinema.org/a/R6NnWxPj1HvUbJPDh32ix5KXQ
 
-### How to play Progression
+### How to play Progression:
 https://asciinema.org/a/xzecPV13p7PxhgfCyG5vSeG2X
+
+### How to play Prime:
+https://asciinema.org/a/eSfnXU7NW4iY8l1FerUIzudwW
