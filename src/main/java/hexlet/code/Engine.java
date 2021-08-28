@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    static final int FROM_NUM = 0;
+    static final int FROM_NUM = 1;
     static final int TO_NUM = 100;
     public static final int COUNT_OF_REPEAT = 3;
 
