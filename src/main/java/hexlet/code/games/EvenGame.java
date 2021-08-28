@@ -28,13 +28,17 @@ public class EvenGame {
     }
 
     public static String rightAnswer() {
-        return isEven(randomNum);
+        if (isEven(randomNum)) {
+            return "yes";
+        } else {
+            return "no";
+        }
     }
 
-    public static String isEven(int num) {
+    public static boolean isEven(int num) {
         if (num % 2 == 0) {
-            return "yes";
+            return true;
         }
-        return "no";
+        return false;
     }
 }
