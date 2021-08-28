@@ -15,3 +15,6 @@ https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0
 
 ### How to play GCD
 https://asciinema.org/a/R6NnWxPj1HvUbJPDh32ix5KXQ
+
+### How to play Progression
+https://asciinema.org/a/xzecPV13p7PxhgfCyG5vSeG2X
