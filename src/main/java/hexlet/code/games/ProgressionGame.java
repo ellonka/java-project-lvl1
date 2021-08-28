@@ -52,7 +52,7 @@ public class ProgressionGame {
     }
 
     static void generateMissingPos(int length) {
-        missingPos = (int) (Math.random() * (length - 1));
+        missingPos = (int) (Math.random() * length);
     }
 
 }
