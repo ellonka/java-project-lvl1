@@ -31,15 +31,12 @@ public class CalcGame {
         int num2 = Integer.parseInt(partsOfExpression[2]);
 
         switch (operator) {
-            case "+" -> {
+            case "+":
                 return Integer.toString(num1 + num2);
-            }
-            case "-" -> {
+            case "-":
                 return Integer.toString(num1 - num2);
-            }
-            default -> {
+            default:
                 return Integer.toString(num1 * num2);
-            }
         }
     }
 
@@ -47,15 +44,12 @@ public class CalcGame {
         int operator = (int) (Math.random() * COUNT_OF_OPERATORS);
 
         switch (operator) {
-            case 0 -> {
+            case 0:
                 return "+";
-            }
-            case 1 -> {
+            case 1:
                 return "-";
-            }
-            default -> {
+            default:
                 return "*";
-            }
         }
     }
 

@@ -24,14 +24,28 @@ public class App {
 
         String choice = scanner.nextLine();
 
+        //С -> не прохожу тесты на github
         switch (choice) {
-            case "1" -> Cli.hello(scanner);
-            case "2" -> EvenGame.playEvenGame(scanner);
-            case "3" -> CalcGame.playCalcGame(scanner);
-            case "4" -> GCDGame.playGCDGame(scanner);
-            case "5" -> ProgressionGame.playProgressionGame(scanner);
-            case "6" -> PrimeGame.playPrimeGame(scanner);
-            default -> System.out.println("Good buy!");
+            case "1":
+                Cli.hello(scanner);
+                break;
+            case "2":
+                EvenGame.playEvenGame(scanner);
+                break;
+            case "3":
+                CalcGame.playCalcGame(scanner);
+                break;
+            case "4":
+                GCDGame.playGCDGame(scanner);
+                break;
+            case "5":
+                ProgressionGame.playProgressionGame(scanner);
+                break;
+            case "6":
+                PrimeGame.playPrimeGame(scanner);
+                break;
+            default:
+                break;
         }
     }
 }

@@ -38,8 +38,10 @@ public class ProgressionGame {
         String[] progression = sequence.split(" ");
         int missingNum = 0;
         for (int i = 0; i < progression.length; i++) {
-            if ("..".equals(progression[i])) {
+            if ("..".equals(progression[i]) && i != 0) {
                 missingNum = (Integer.parseInt(progression[i - 1]) + Integer.parseInt(progression[i + 1])) / 2;
+            } else if ("..".equals(progression[i])) {
+                missingNum = 2 * Integer.parseInt(progression[i + 1]) - Integer.parseInt(progression[i + 2]);
             }
         }
         return Integer.toString(missingNum);
