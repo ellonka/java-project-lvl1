@@ -22,20 +22,16 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        String choice = scanner.next();
+        String choice = scanner.nextLine();
 
-        if (choice.equals("1")) {
-            Cli.hello(scanner);
-        } else if (choice.equals("2")) {
-            EvenGame.playEvenGame(scanner);
-        } else if (choice.equals("3")) {
-            CalcGame.playCalcGame(scanner);
-        } else if (choice.equals("4")) {
-            GCDGame.playGCDGame(scanner);
-        } else if (choice.equals("5")) {
-            ProgressionGame.playProgressionGame(scanner);
-        } else if (choice.equals("6")) {
-            PrimeGame.playPrimeGame(scanner);
+        switch (choice) {
+            case "1" -> Cli.hello(scanner);
+            case "2" -> EvenGame.playEvenGame(scanner);
+            case "3" -> CalcGame.playCalcGame(scanner);
+            case "4" -> GCDGame.playGCDGame(scanner);
+            case "5" -> ProgressionGame.playProgressionGame(scanner);
+            case "6" -> PrimeGame.playPrimeGame(scanner);
+            default -> System.out.println("Good buy!");
         }
     }
 }

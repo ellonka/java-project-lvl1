@@ -1,38 +1,34 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Scanner;
 
 public class GCDGame {
-    private static int num1;
-    private static int num2;
+    private static String rules = "Find the greatest common divisor of given numbers.";
 
     public static void playGCDGame(Scanner scanner) {
-        String name = Cli.hello(scanner);
-        System.out.println("Find the greatest common divisor of given numbers.");
-
         String[] arrayOfQuestions = new String[Engine.COUNT_OF_REPEAT];
         String[] arrayOfRightAnswers = new String[Engine.COUNT_OF_REPEAT];
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
             arrayOfQuestions[i] = question();
-            arrayOfRightAnswers[i] = rightAnswer();
+            arrayOfRightAnswers[i] = rightAnswer(arrayOfQuestions[i]);
         }
 
-        Engine.play(scanner, name, arrayOfQuestions, arrayOfRightAnswers);
+        Engine.play(scanner, rules, arrayOfQuestions, arrayOfRightAnswers);
     }
 
     public static String question() {
-        num1 = Engine.generateNum();
-        num2 = Engine.generateNum();
+        int num1 = Engine.generateNum();
+        int num2 = Engine.generateNum();
 
         return num1 + " " + num2;
     }
 
-    public static String rightAnswer() {
-        int max = Math.max(num1, num2);
-        int min = Math.min(num1, num2);
+    public static String rightAnswer(String expression) {
+        String[] numbers = expression.split(" ");
+        int max = Math.max(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1]));
+        int min = Math.min(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1]));
         int temp;
 
         if (max % min == 0) {
