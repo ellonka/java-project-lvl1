@@ -1,29 +1,28 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
+import hexlet.code.Utils;
 
 public class CalcGame {
     private static String rules = "What is the result of the expression?";
     private static final int COUNT_OF_OPERATORS = 3;
 
-    public static void playCalcGame(Scanner scanner) {
-        String[] arrayOfQuestions = new String[Engine.COUNT_OF_REPEAT];
-        String[] arrayOfRightAnswers = new String[Engine.COUNT_OF_REPEAT];
+    public static void playCalcGame() {
+        String[] questions = new String[Engine.COUNT_OF_REPEAT];
+        String[] rightAnswers = new String[Engine.COUNT_OF_REPEAT];
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
-            arrayOfQuestions[i] = question();
-            arrayOfRightAnswers[i] = rightAnswer(arrayOfQuestions[i]);
+            questions[i] = getQuestion();
+            rightAnswers[i] = getRightAnswer(questions[i]);
         }
 
-        Engine.play(scanner, rules, arrayOfQuestions, arrayOfRightAnswers);
+        Engine.play(rules, questions, rightAnswers);
     }
 
-    public static String question() {
-        return Engine.generateNum() + " " + generateOperator() + " " + Engine.generateNum();
+    public static String getQuestion() {
+        return Utils.generateNum(1, 100) + " " + generateOperator() + " " + Utils.generateNum(1, 100);
     }
 
-    public static String rightAnswer(String expression) {
+    public static String getRightAnswer(String expression) {
         String[] partsOfExpression = expression.split(" ");
 
         int num1 = Integer.parseInt(partsOfExpression[0]);
@@ -35,8 +34,10 @@ public class CalcGame {
                 return Integer.toString(num1 + num2);
             case "-":
                 return Integer.toString(num1 - num2);
-            default:
+            case "*":
                 return Integer.toString(num1 * num2);
+            default:
+                return "Что-то пошло не так"; //с break здесь выдает ошибку, потому что в этом случае не возвращается String
         }
     }
 

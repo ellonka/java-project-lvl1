@@ -1,23 +1,18 @@
-### Hexlet tests and linter status:
 [![Actions Status](https://github.com/ellonka/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ellonka/java-project-lvl1/actions)
-
-### Maintainability Badge:
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
-### Build:
+[![Maintainability](https://api.codeclimate.com/v1/badges/297868dfbc47e7692dbd/maintainability)](https://codeclimate.com/github/ellonka/java-project-lvl1/maintainability)
 ![Build](https://github.com/ellonka/java-project-lvl1/actions/workflows/build-for-actions/badge.svg)
 
-### To watch an example how to play Even:
-https://asciinema.org/a/KHmF29gw1c7Lyn3iPD4WAZlh4
+###EvenGame
+[![asciicast](https://asciinema.org/a/F71UyZDwgLAoQbRHfqiSxouhe.svg)](https://asciinema.org/a/F71UyZDwgLAoQbRHfqiSxouhe)
 
-### How to play Calc:
-https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0
+###CalcGame
+[![asciicast](https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0.svg)](https://asciinema.org/a/VFUbfHJBoOluGdyzyOCeAVPz0)
 
-### How to play GCD:
-https://asciinema.org/a/R6NnWxPj1HvUbJPDh32ix5KXQ
+###GCDGame
+[![asciicast](https://asciinema.org/a/U2hv15G0XgYFShO1vzWyzfHgi.svg)](https://asciinema.org/a/U2hv15G0XgYFShO1vzWyzfHgi)
 
-### How to play Progression:
-https://asciinema.org/a/xzecPV13p7PxhgfCyG5vSeG2X
+###ProgressionGame
+[![asciicast](https://asciinema.org/a/xzecPV13p7PxhgfCyG5vSeG2X.svg)](https://asciinema.org/a/xzecPV13p7PxhgfCyG5vSeG2X)
 
-### How to play Prime:
-https://asciinema.org/a/eSfnXU7NW4iY8l1FerUIzudwW
+###PrimeGame
+[![asciicast](https://asciinema.org/a/eSfnXU7NW4iY8l1FerUIzudwW.svg)](https://asciinema.org/a/eSfnXU7NW4iY8l1FerUIzudwW)

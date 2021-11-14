@@ -3,11 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    static final int FROM_NUM = 1;
-    static final int TO_NUM = 100;
     public static final int COUNT_OF_REPEAT = 3;
 
-    public static void play(Scanner scanner, String rules, String[] question, String[] rightAnswer) {
+    public static void play(String rules, String[] question, String[] rightAnswer) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = scanner.next();
@@ -32,9 +31,5 @@ public class Engine {
                 break;
             }
         }
-    }
-
-    public static int generateNum() {
-        return FROM_NUM + (int) (Math.random() * TO_NUM);
     }
 }

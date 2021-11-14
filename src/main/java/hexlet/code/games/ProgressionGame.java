@@ -1,39 +1,38 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
+import hexlet.code.Utils;
 
 public class ProgressionGame {
     private static String rules = "What number is missing in the progression?";
     static final int LENGTH_OF_PROGRESSION = 10;
 
-    public static void playProgressionGame(Scanner scanner) {
-        String[] arrayOfQuestions = new String[Engine.COUNT_OF_REPEAT];
-        String[] arrayOfRightAnswers = new String[Engine.COUNT_OF_REPEAT];
+    public static void playProgressionGame() {
+        String[] questions = new String[Engine.COUNT_OF_REPEAT];
+        String[] rightAnswers = new String[Engine.COUNT_OF_REPEAT];
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
-            arrayOfQuestions[i] = question();
-            arrayOfRightAnswers[i] = rightAnswer(arrayOfQuestions[i]);
+            questions[i] = getQuestion();
+            rightAnswers[i] = getRightAnswer(questions[i]);
         }
 
-        Engine.play(scanner, rules, arrayOfQuestions, arrayOfRightAnswers);
+        Engine.play(rules, questions, rightAnswers);
     }
 
-    public static String question() {
-        String str = "";
+    public static String getQuestion() {
+        String question = "";
         int[] arr = generateArray(LENGTH_OF_PROGRESSION);
-        int missingPos = generateMissingPos(arr);
+        int missingPos = generateMissingPos(LENGTH_OF_PROGRESSION);
         for (int i = 0; i < arr.length; i++) {
             if (i == missingPos) {
-                str += ".. ";
+                question += ".. ";
             } else {
-                str += arr[i] + " ";
+                question += arr[i] + " ";
             }
         }
-        return str;
+        return question;
     }
 
-    public static String rightAnswer(String str) {
+    public static String getRightAnswer(String str) {
         String sequence = str.trim();
         String[] progression = sequence.split(" ");
         int missingNum = 0;
@@ -48,20 +47,20 @@ public class ProgressionGame {
     }
 
     static int[] generateArray(int length) {
+        return generateProgression(Utils.generateNum(0, 100), Utils.generateNum(0, 100), length);
+    }
+
+    static int[] generateProgression(int firstMember, int step, int length) {
         int[] arr = new int[length];
-        arr[0] = Engine.generateNum();
-        int progressionStep = Engine.generateNum();
-
-        for (int i = 1; i < arr.length; i++) {
-            arr[i] = arr[i - 1] + progressionStep;
+        arr[0] = firstMember;
+        for (int i = 1; i < length; i++) {
+            arr[i] = arr[i - 1] + step;
         }
-
         return arr;
     }
 
-    static int generateMissingPos(int[] arr) {
-        int missingPos = (int) (Math.random() * (arr.length - 1));
-        return missingPos;
+    static int generateMissingPos(int arrayLength) {
+        return Utils.generateNum(0, arrayLength);
     }
 
 }

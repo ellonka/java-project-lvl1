@@ -24,25 +24,26 @@ public class App {
 
         String choice = scanner.nextLine();
 
-        //С -> не прохожу тесты на github
+        //С "->" не прохожу тесты на github
         switch (choice) {
             case "1":
-                Cli.hello(scanner);
+                Cli.hello(scanner); //здесь оставлю, потому что Никита говорил, что плодить создание новых сканеров -
+                                    //плохая практика
                 break;
             case "2":
-                EvenGame.playEvenGame(scanner);
+                EvenGame.playEvenGame();
                 break;
             case "3":
-                CalcGame.playCalcGame(scanner);
+                CalcGame.playCalcGame();
                 break;
             case "4":
-                GCDGame.playGCDGame(scanner);
+                GCDGame.playGCDGame();
                 break;
             case "5":
-                ProgressionGame.playProgressionGame(scanner);
+                ProgressionGame.playProgressionGame();
                 break;
             case "6":
-                PrimeGame.playPrimeGame(scanner);
+                PrimeGame.playPrimeGame();
                 break;
             default:
                 break;
