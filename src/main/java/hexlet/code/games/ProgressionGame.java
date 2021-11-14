@@ -61,7 +61,7 @@ public class ProgressionGame {
     }
 
     static int generateMissingPos(int arrayLength) {
-        return Utils.generateNum(0, arrayLength);
+        return Utils.generateNum(0, arrayLength - 1);
     }
 
 }
