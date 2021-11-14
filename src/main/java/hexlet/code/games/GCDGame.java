@@ -18,8 +18,8 @@ public class GCDGame {
     }
 
     public static String getQuestion() {
-        int num1 = Utils.generateNum(1, 100);
-        int num2 = Utils.generateNum(1, 100);
+        int num1 = Utils.generateNum(1, Engine.MAX_VALUE);
+        int num2 = Utils.generateNum(1, Engine.MAX_VALUE);
 
         return num1 + " " + num2;
     }

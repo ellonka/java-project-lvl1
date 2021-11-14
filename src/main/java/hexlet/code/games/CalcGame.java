@@ -19,7 +19,8 @@ public class CalcGame {
     }
 
     public static String getQuestion() {
-        return Utils.generateNum(1, 100) + " " + generateOperator() + " " + Utils.generateNum(1, 100);
+        return Utils.generateNum(1, Engine.MAX_VALUE) + " "
+                + generateOperator() + " " + Utils.generateNum(1, Engine.MAX_VALUE);
     }
 
     public static String getRightAnswer(String expression) {
@@ -37,7 +38,8 @@ public class CalcGame {
             case "*":
                 return Integer.toString(num1 * num2);
             default:
-                return "Что-то пошло не так"; //с break здесь выдает ошибку, потому что в этом случае не возвращается String
+                return "Что-то пошло не так"; //с break здесь выдает ошибку,
+                                            // потому что в этом случае не возвращается String
         }
     }
 

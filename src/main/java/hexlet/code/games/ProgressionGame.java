@@ -47,7 +47,8 @@ public class ProgressionGame {
     }
 
     static int[] generateArray(int length) {
-        return generateProgression(Utils.generateNum(0, 100), Utils.generateNum(0, 100), length);
+        return generateProgression(Utils.generateNum(0, Engine.MAX_VALUE),
+                    Utils.generateNum(0, Engine.MAX_VALUE), length);
     }
 
     static int[] generateProgression(int firstMember, int step, int length) {

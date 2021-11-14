@@ -18,7 +18,7 @@ public class EvenGame {
     }
 
     public static String getQuestion() {
-        return Integer.toString(Utils.generateNum(1, 100));
+        return Integer.toString(Utils.generateNum(1, Engine.MAX_VALUE));
     }
 
     public static String getRightAnswer(String checkedNum) {

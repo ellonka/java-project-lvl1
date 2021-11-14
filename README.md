@@ -1,6 +1,6 @@
 [![Actions Status](https://github.com/ellonka/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ellonka/java-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/297868dfbc47e7692dbd/maintainability)](https://codeclimate.com/github/ellonka/java-project-lvl1/maintainability)
-![Build](https://github.com/ellonka/java-project-lvl1/actions/workflows/build-for-actions/badge.svg)
+[![Build](https://github.com/ellonka/java-project-lvl1/actions/workflows/build-for-actions.yml/badge.svg?branch=main)](https://github.com/ellonka/java-project-lvl1/actions/workflows/build-for-actions.yml)
 
 ###EvenGame
 [![asciicast](https://asciinema.org/a/F71UyZDwgLAoQbRHfqiSxouhe.svg)](https://asciinema.org/a/F71UyZDwgLAoQbRHfqiSxouhe)

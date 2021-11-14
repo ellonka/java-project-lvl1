@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int COUNT_OF_REPEAT = 3;
+    public static final int MAX_VALUE = 100;
 
     public static void play(String rules, String[] question, String[] rightAnswer) {
         Scanner scanner = new Scanner(System.in);
