@@ -4,26 +4,26 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class PrimeGame {
-    private static String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void playPrimeGame() {
         String[] questions = new String[Engine.COUNT_OF_REPEAT];
         String[] rightAnswers = new String[Engine.COUNT_OF_REPEAT];
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
-            questions[i] = getQuestion();
-            rightAnswers[i] = getRightAnswer(questions[i]);
+            int val = Utils.generateNum(1, Utils.MAX_VALUE);
+            questions[i] = getQuestion(val);
+            rightAnswers[i] = getRightAnswer(val);
         }
 
-        Engine.play(rules, questions, rightAnswers);
+        Engine.play(RULES, questions, rightAnswers);
     }
 
-    public static String getQuestion() {
-        return Integer.toString(Utils.generateNum(1, Engine.MAX_VALUE));
+    public static String getQuestion(int val) {
+        return Integer.toString(val);
     }
 
-    public static String getRightAnswer(String num) {
-        int checkedNum = Integer.parseInt(num);
-        return isPrime(checkedNum) ? "yes" : "no";
+    public static String getRightAnswer(int val) {
+        return isPrime(val) ? "yes" : "no";
     }
 
     private static boolean isPrime(int num) {

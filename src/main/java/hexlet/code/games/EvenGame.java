@@ -4,26 +4,27 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class EvenGame {
-    private static String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void playEvenGame() {
         String[] questions = new String[Engine.COUNT_OF_REPEAT];
         String[] rightAnswers = new String[Engine.COUNT_OF_REPEAT];
+
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
-            questions[i] = getQuestion();
-            rightAnswers[i] = getRightAnswer(questions[i]);
+            int val = Utils.generateNum(1, Utils.MAX_VALUE);
+            questions[i] = getQuestion(val);
+            rightAnswers[i] = getRightAnswer(val);
         }
 
-        Engine.play(rules, questions, rightAnswers);
+        Engine.play(RULES, questions, rightAnswers);
     }
 
-    public static String getQuestion() {
-        return Integer.toString(Utils.generateNum(1, Engine.MAX_VALUE));
+    public static String getQuestion(int val) {
+        return Integer.toString(val);
     }
 
-    public static String getRightAnswer(String checkedNum) {
-        int num = Integer.parseInt(checkedNum);
-        return isEven(num) ? "yes" : "no";
+    public static String getRightAnswer(int val) {
+        return isEven(val) ? "yes" : "no";
     }
 
     private static boolean isEven(int num) {

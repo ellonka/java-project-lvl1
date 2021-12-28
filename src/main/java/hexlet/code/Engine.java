@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int COUNT_OF_REPEAT = 3;
-    public static final int MAX_VALUE = 100;
 
     public static void play(String rules, String[] question, String[] rightAnswer) {
         Scanner scanner = new Scanner(System.in);
@@ -21,16 +20,13 @@ public class Engine {
 
             if (answer.equals(rightAnswer[i])) {
                 System.out.println("Correct!");
-
-                if (i == COUNT_OF_REPEAT - 1) {
-                    System.out.println("Congratulations, " + name + "!");
-                }
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + rightAnswer[i] + "'.");
                 System.out.println("Let's try again, " + name + "!");
-                break;
+                return;
             }
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 }

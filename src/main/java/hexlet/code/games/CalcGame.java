@@ -4,32 +4,29 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class CalcGame {
-    private static String rules = "What is the result of the expression?";
+    private static final String RULES = "What is the result of the expression?";
     private static final int COUNT_OF_OPERATORS = 3;
 
     public static void playCalcGame() {
         String[] questions = new String[Engine.COUNT_OF_REPEAT];
         String[] rightAnswers = new String[Engine.COUNT_OF_REPEAT];
+
         for (int i = 0; i < Engine.COUNT_OF_REPEAT; i++) {
-            questions[i] = getQuestion();
-            rightAnswers[i] = getRightAnswer(questions[i]);
+            int num1 = Utils.generateNum(1, Utils.MAX_VALUE);
+            int num2 = Utils.generateNum(1, Utils.MAX_VALUE);
+            String operator = generateOperator();
+            questions[i] = getQuestion(num1, num2, operator);
+            rightAnswers[i] = getRightAnswer(num1, num2, operator);
         }
 
-        Engine.play(rules, questions, rightAnswers);
+        Engine.play(RULES, questions, rightAnswers);
     }
 
-    public static String getQuestion() {
-        return Utils.generateNum(1, Engine.MAX_VALUE) + " "
-                + generateOperator() + " " + Utils.generateNum(1, Engine.MAX_VALUE);
+    public static String getQuestion(int num1, int num2, String operator) {
+        return num1 + " " + operator + " " + num2;
     }
 
-    public static String getRightAnswer(String expression) {
-        String[] partsOfExpression = expression.split(" ");
-
-        int num1 = Integer.parseInt(partsOfExpression[0]);
-        String operator = partsOfExpression[1];
-        int num2 = Integer.parseInt(partsOfExpression[2]);
-
+    public static String getRightAnswer(int num1, int num2, String operator) {
         switch (operator) {
             case "+":
                 return Integer.toString(num1 + num2);
